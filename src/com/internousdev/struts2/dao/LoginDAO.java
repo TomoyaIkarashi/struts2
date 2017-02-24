@@ -22,7 +22,7 @@ public class LoginDAO {
 		Connection con = db.getConnection();
 		LoginDTO dto = new LoginDTO();
 
-		String sql = "slect * from user where user_name=?and password=?";
+		String sql = "select * from user where user_name=? and password=?";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, name);
