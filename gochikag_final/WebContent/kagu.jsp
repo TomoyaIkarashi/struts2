@@ -15,10 +15,10 @@
 </head>
 <body>
 	<s:if test="%{#session.id != 0}">
-		<s:include value="header_done.jsp" />
+		<s:include value="header.jsp" />
 	</s:if>
 	<s:else>
-		<s:include value="header.jsp" />
+		<s:include value="header_done.jsp" />
 	</s:else>
 
 
