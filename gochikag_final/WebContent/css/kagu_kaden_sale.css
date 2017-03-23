@@ -1,0 +1,39 @@
+.top-wrapper{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+  	
+.form-wrapper{
+	width: 100%;
+	clear: both;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 20px;
+}
+.form1{
+	width: 45%;
+	text-align: right;
+	float: left;
+	margin-right: 5%;
+	margin-bottom: 30px;
+}	
+.form2{
+	width: 45%;
+	margin: 0 auto;
+	text-align: left;
+	float: right;
+	margin-left: 5%;
+	margin-bottom: 30px;
+}
+.image {
+  	opacity: 0.8;
+  	width: 300px;
+  	height: 300px;
+    border-radius: 10px;
+  	transition: all 0.5s;
+}
+.image:hover{
+	opacity: 1.0;
+	border-radius: 150px;
+}

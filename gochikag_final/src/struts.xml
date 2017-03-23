@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources"
+			  value="property.admin,
+			  		property.adminDone,
+			  		property.adminInfo,
+			  		property.adminItemManage,
+			  		property.adminItemRegister,
+			  		property.cart,
+			  		property.confirm,
+			  		property.confirmDone,
+			  		property.headerDone,
+			  		property.header,
+			  		property.infoDone,
+			  		property.info,
+			  		propert.item,
+			  		property.kaden,
+			  		property.kagu,
+			  		property.login,
+			  		property.main,
+			  		property.mayPage,
+			  		property.pay,
+			  		property.sale,
+			  		property.top"/>
+	<package name="action" extends="struts-default">
+
+<!-- Login系 -->
+	<!-- LoginAction ログイン用アクション -->
+		<action name="LoginAction" class="action.LoginAction" method="execute">
+			<result name="success">main.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="admin">admin.jsp</result>
+		</action>
+
+	<!-- LogoutAction ログアウト用アクション -->
+		<action name="LogoutAction" class="action.LogoutAction" method="execute">
+			<result name="success">top.jsp</result>
+		</action>
+
+<!-- ヘッダー系 -->
+	<!-- MyPageAction マイページ確認用アクション -->
+		<action name="MyPageAction" class="action.MyPageAction" method="execute">
+			<result name="success">my_page.jsp</result>
+		</action>
+
+
+	<!-- InfoAction お問い合わせ用アクション -->
+		<action name="InfoAction" class="action.InfoAction" method="execute">
+			<result name="success">info_done.jsp</result>
+			<result name="error">info.jsp</result>
+		</action>
+
+
+<!--  Item系 -->
+	<!-- CategoryAction 各カテゴリーページへ遷移するアクション -->
+		<action name="CategoryAction" class="action.CategoryAction" method="execute">
+			<result name="kagu">kagu.jsp</result>
+			<result name="kaden">kaden.jsp</result>
+			<result name="sale">sale.jsp</result>
+		</action>
+	<!-- CategoryAction 各アイテムページへ遷移するアクション -->
+		<action name="ItemAction" class="action.ItemAction" method="execute">
+			<result name="success">item.jsp</result>
+		</action>
+
+
+<!-- Cart系 -->
+	<!-- CartSelectAction カート情報を取得するアクション -->
+		<action name="CartSelectAction" class="action.CartSelectAction" method="execute">
+			<result name="success">cart.jsp</result>
+			<result name="error">cart.jsp</result>
+		</action>
+
+	<!-- CartInsertAction カートにアイテムを入れるアクション -->
+		<action name="CartInsertAction" class="action.CartInsertAction" method="execute">
+			<result name="success" type="chain">CartSelectAction</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+	<!-- CartUpdateAction カート数量を更新するアクション -->
+		<action name="CartUpdateAction" class="action.CartUpdateAction" method="execute">
+			<result name="success" type="chain">CartSelectAction</result>
+			<result name="error">cart.jsp</result>
+		</action>
+
+	<!-- CartDeleteAction カート情報を削除するアクション -->
+		<action name="CartDeleteAction" class="action.CartDeleteAction" method="execute">
+			<result name="success" type="chain">CartSelectAction</result>
+			<result name="error">cart.jsp</result>
+		</action>
+
+
+<!-- 購入処理系 -->
+	<!-- PayAction  cart_flgをtrueにするアクション -->
+		<action name="PayAction" class="action.PayAction" method="execute">
+			<result name="success">pay.jsp</result>
+			<result name="error" type="chain">CartSelectAction</result>
+		</action>
+
+	<!-- CreditConfirmAction  クレジット情報を認証するアクション -->
+		<action name="CreditConfirmAction" class="action.CreditConfirmAction" method="execute">
+			<result name="success">confirm.jsp</result>
+			<result name="error">pay.jsp</result>
+		</action>
+
+	<!-- GoBackCreditConfirmAction クレジット認証を解除するアクション -->
+		<action name="GoBackCreditConfirmAction" class="action.GoBackCreditConfirmAction" method="execute">
+			<result name="success">pay.jsp</result>
+			<result name="error" type="chain">LogoutAction</result>
+		</action>
+
+	<!-- GoBackCartSelectAction クレジット認証およびカートフラグを解除するアクション -->
+		<action name="GoBackCartSelectAction" class="action.GoBackCartSelectAction" method="execute">
+			<result name="success" type="chain">CartSelectAction</result>
+			<result name="error" type="chain">LogoutAction</result>
+		</action>
+
+	<!-- PayConfirmAction 全ての購入手続きを完遂し、gochikagDBと使用されたクレジット会社のDBそれぞれにクレジットの領収書を発行する -->
+		<action name="PayConfirmAction" class="action.PayConfirmAction" method="execute">
+			<result name="success">confirm_done.jsp</result>
+			<result name="error" type="chain">LogoutAction</result>
+		</action>
+
+
+<!-- 管理者系 -->
+		<action name="AdminItemManageAction" class="action.AdminItemManageAction" method="execute">
+			<result name="success">admin_item_manage.jsp</result>
+			<result name="error">admin.jsp</result>
+		</action>
+		<action name="AdminItemRegisterAction" class="action.AdminItemRegisterAction" method="execute">
+			<result name="success">admin_done.jsp</result>
+			<result name="error">admin.jsp</result>
+		</action>
+
+<!--  OAUTH系 -->
+	<!-- Twitter認証を行うアクション -->
+		<action name="TwitterAction" class="action.GoTwitterAction" method="execute">
+           <result name="success" type="redirectAction">main.jsp</result>
+           <result name="error">top.jsp</result>
+       </action>
+
+	<!-- Twitter認証のコールバックアクション -->
+		<action name="LoginTwitterAction" class="action.LoginTwitterAction" method="execute">
+			<result name="success" type="redirectAction">main</result>
+			<result name="error">top.jsp</result>
+        </action>
+
+	<!-- Facebook認証を行うアクション -->
+		<action name="LoginFacebook" class="action.GoFacebookAction" method="execute">
+            <result name="success">main.jsp</result>
+            <result name="error">login.jsp</result>
+		</action>
+
+	<!-- Facebook認証のコールバックアクション -->
+		<action name="LoginFacebookAction" class="action.LoginFacebookAction" method="execute">
+            <!--  <result name="success" type="redirectAction">InfoAction</result> -->
+            <result name="success">main.jsp</result>
+            <result name="error">login.jsp</result>
+		</action>
+	</package>
+</struts>

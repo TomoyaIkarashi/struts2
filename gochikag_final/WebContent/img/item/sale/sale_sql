@@ -1,0 +1,21 @@
+	item tableに入れるセール商品のデータ
+insert into item values(13,"cabinet", 6000, "img/item/sale/cabinet_main.jpg", 20, false, "2017-03-17-12:00", "2017-03-17-12:00", "sale");
+insert into item values(14,"chandelier",8000, "img/item/sale/chandelier_main.jpg",20,false,"2017-03-17-12:00","2017-03-17-12:00","sale");
+insert into item values(15,"clock", 3500, "img/item/sale/clock_main.jpg", 20,false,"2017-03-17-12:00","2017-03-17-12:00","sale");
+insert into item values(16,"sofa", 7000,"img/item/sale/sofa_main.jpg",20,false,"2017-03-17-12:00","2017-03-17-12:00","sale");
+insert into item values(17,"dust_box",2000,"img/item/sale/dust_box_main.jpg",20,false,"2017-03-17-12:00","2017-03-17-12:00","sale");
+insert into item values(18,"tea_time",2000,"img/item/sale/tea_time_main.jpg",20,false,"2017-03-17-12:00","2017-03-17-12:00","sale");
+
+
+
+	pictures tableに入れるセール商品のデータ
+insert into pictures values(13,'img/item/sale/cabinet_sub1.jpg','img/item/sale/cabinet_sub2.jpg','img/item/sale/cabinet_sub3.jpg', false);
+insert into pictures values(14,'img/item/sale/chandelier_sub1.jpg','img/item/sale/chandelier_sub2.jpg','img/item/sale/chandelier_sub3.jpg', false);
+insert into pictures values(15,'img/item/sale/clock_sub1.jpg','img/item/sale/clock_sub2.jpg','img/item/sale/clock_sub3.jpg',false);
+insert into pictures values(16,'img/item/sale/dust_box_sub1.jpg','img/item/sale/dust_box_sub2.jpg','img/item/sale/dust_box_sub3.jpg', false);
+insert into pictures values(17,'img/item/sale/sofa_sub1.jpg','img/item/sale/sofa_sub2.jpg','img/item/sale/sofa_sub3.jpg', false);
+insert into pictures values(18,'img/item/sale/tea_time_sub1.jpg','img/item/sale/tea_time_sub2.jpg','img/item/sale/tea_time_sub3.jpg',false);
+
+
+	detail tableに入れるセール商品のデータ
+insert into detail values(13, "ココアやカプチーノを入れて、素敵なティータイムをどうぞ!", "Anytime can be wonderful tea time with this cabinet! You absolutely wanna have some cocoa, captino or whatever coming to your mind", false);

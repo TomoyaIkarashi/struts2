@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.btn_a {
+	width: 200px;
+	height: 200px;
+	font-size: 100%;
+	border-radius: 50px;
+	background: url("../img/top-header-mainimg/isu.jpg") no-repeat;
+	box-shadow: 2px 2px 2px #555;
+	trandsition:;
+	cursor: pointer;
+}
+
+.btn_a:hover {
+	background: url("../img/top-header-mainimg/isu2.jpg") no-repeat;
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+
+.btn_b {
+	width: 200px;
+	height: 200px;
+	font-size: 100%;
+	border-radius: 50px;
+	background: url("../img/top-header-mainimg/kaden.jpg") no-repeat;
+	box-shadow: 2px 2px 2px #555;
+	cursor: pointer;
+}
+
+.btn_b:hover {
+	background: url("../img/top-header-mainimg/kaden2.jpg") no-repeat;
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+
+.btn_c {
+	width: 200px;
+	height: 200px;
+	font-size: 100%;
+	border-radius: 50px;
+	background: url("../img/top-header-mainimg/sale2.jpg") no-repeat;
+	porder-radius: 100px;
+	box-shadow: 2px 2px 2px #555;
+	cursor: pointer;
+}
+
+.btn_c:hover {
+	background: url("../img/top-header-mainimg/vr.jpg") no-repeat;
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+
+/* トップ画面スライド */
+.wrapper {
+	width: 100%;
+	height: 400px;
+}
+
+#slideshow {
+	pointer-events: none;
+	width: 64%;
+	margin: 0 auto;
+}
+
+#slideshow>li {
+	box-align: center;
+	list-style: none;
+	opacity: 0;
+	position: absolute;
+	transition: opacity 1s;
+	width: 80%;
+}
+
+#slideshow>li.current {
+	width: 80%;
+	paddding: 0;
+	opacity: 1;
+}
+
+.img {
+	width: 80%;
+	height: 400px;
+	animation: "slide";
+}

@@ -1,0 +1,30 @@
+		body{
+			text-align: center;
+	  		/*background-color:  #F9F8F4;*/
+	  		list-style: none;
+	  	}
+	  	.table-wrapper{
+	  		width: 80%;
+	  		margin: 20px auto;
+	  	}
+	  	.table-wrapper p{
+	  		font-size: 18px;
+	  	}
+	  	.bottom-wrapper h1{
+	  		padding-bottom: 20px;
+	  	}
+	  	
+	  	.bottom-wrapper p{
+	  		width: 45%;
+	  		float: left;
+	  		font-size: 20px;
+	  		text-align: right;
+	  		margin-right: 5%;
+	  	}
+	  	.bottom-wrapper form{
+	  		width: 45%;
+	  		float: left;
+	  		font-size: 20px;
+	  		text-align: left;
+	  		margin-left: 5%;
+	  	}

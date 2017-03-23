@@ -1,0 +1,22 @@
+.bottom-wrapper{
+	border-top: 1px dashed black;
+	padding-top: 10px;
+	width: 100%;
+	clear: both;
+}
+.bottom-left{
+	width: 45%;
+	margin-right: 5%;
+	text-align: right;
+	float: left;
+}
+.bottom-right{
+	width: 45%;
+	margin-letf: 5%;
+	text-align: left;
+	float: left;
+}
+
+.btn{
+	width: 150px;
+}

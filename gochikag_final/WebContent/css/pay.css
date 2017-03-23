@@ -1,0 +1,67 @@
+.cover {
+	width: 700px;
+	clear: both;
+	text-align: center;
+	margin: 20px auto;
+}
+
+.form-text {
+	width: 45%;
+	text-align: right;
+	float: left;
+}
+
+.cover1 .wwgrp {
+	width: 45%;
+	text-align: left;
+	display: inline-block;
+}
+
+.choose-credit {
+	width: 45%;
+	display: inline-block;
+	text-align: left;
+}
+
+.choose-credit-text {
+	text-align: right;
+	float: left;
+}
+
+.choose-credit-select {
+	text-align: left;
+	width: 100px;
+}
+
+.card-number {
+	float: left;
+	margin-right: 5px;
+}
+
+.card-number-text {
+	float: left;
+	text-align: right;
+	width: 45%;
+}
+
+.card-number-box {
+	display: inline-block;
+	margin: 0 auto;
+	width: 45%;
+}
+
+.card-security-text {
+	float: left;
+	text-align: right;
+	width: 45%;
+}
+
+.card-security-number {
+	display: inline-block;
+	margin: 0 auto;
+	width: 45%;
+}
+
+.card-security {
+	float: left;
+}

@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.headline {
+	font-size:14px; /* 文字の大きさ */
+	background:url("../img/midashi.png") no-repeat;
+	line-height:50px; /* 行の高さ */
+	padding:0 0 0 20px; /* 文字周りの余白（上 右 下 左px） */
+	margin:30px 0 20px; /* 画像周りの余白（上 左右 下px） */
+}

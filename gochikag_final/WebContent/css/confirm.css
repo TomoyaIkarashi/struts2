@@ -1,0 +1,52 @@
+		.credit-wrapper{
+			width: 100%;
+			clear: both;
+			height: 180px;
+			border-bottom: 1px dashed black;
+		}
+		
+		.pay{
+			width: 47%;
+			float: left;
+			text-align: right;
+			margin-right: 3%;
+		}
+		
+		.pay p {
+			font-size: 18px;
+		}
+		
+		.detail{
+			width: 47%;
+			float: left;
+			text-align: left;
+			margin-left: 3%;
+		}
+		
+		.detail p{
+			font-size: 18px;
+		}
+		
+		.btn-wrapper{
+			width: 40%;
+			margin: 10px auto;
+		}
+		.btn-wrapper btn{
+			opacity: 0.9;
+		}
+		
+		.form1{
+			display: block;
+			width: 45%;
+			float: left;
+			text-align: right;
+			margin-right: 5%;
+		}
+		
+		.form2{
+			display: block;
+			width: 45%;
+			float: left;
+			text-align: left;
+			margin-left: 5%;
+		}
