@@ -78,13 +78,14 @@ a {
 }
 
 .form-wrapper {
+
 	width: 80%;
 	margin: 0 auto;
 	clear: both;
 }
 
 .select-wrapper {
-	width: 30%;
+	width: 50%;
 	height: 30px;
 	clear: both;
 }
